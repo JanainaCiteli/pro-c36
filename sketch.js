@@ -36,22 +36,22 @@ var touches = [0, 1, 2];
 
 function preload() {
 
-    mario_running = loadAnimation("assets/mariogif-1.png", "assets/mariogif-2.png", "assets/mariogif-3.png");
-    mario_jumping = loadImage("./assets/mariojump.png");
-    mario_stop = loadImage("./assets/mariogif-1.png.png");
+    mario_running = loadAnimation("assets/mario1.png", "assets/mariogif-2.png", "assets/mariogif-3.png");
+    // mario_jumping = loadImage("./assets/mariojump.png");
+    // mario_stop = loadImage("./assets/mariogif-1.png");
 
-    plant_eating = loadAnimation("./assets/Plantagif-1.png.png", "./assets/Plantagif-2.png.png");
-    surprise_img = loadImage("./assets/Surprise.png");
-    coins = loadImage("./assets/Coins.png");
+    // plant_eating = loadAnimation("./assets/Plantagif-1.png", "./assets/Plantagif-2.png");
+    // surprise_img = loadImage("./assets/Surprise.png");
+    // coins = loadImage("./assets/Coin.png");
 
-    one_star = loadImage("./assets/1star(2).png");
-    two_star = loadImage("./assets/2star(2).png");
-    tree_star = loadImage("./assets/3star(2).png");
-    zero_star = loadImage("./assets/0star(2).png");
+    // one_star = loadImage("./assets/1star.png");
+    // two_star = loadImage("./assets/2star.png");
+    // tree_star = loadImage("./assets/3star.png");
+    // zero_star = loadImage("./assets/0star.png");
 
-    cloud_img = loadImage("./assets/Cloud.png");
+    // cloud_img = loadImage("./assets/Cloud.png");
 
-    ground_img = loadImage("./assets/Ground.png");
+    // ground_img = loadImage("./assets/Ground.png");
 
 };
 
@@ -129,7 +129,7 @@ function draw() {
             touches[2];
         };
 
-        if (surpriseGroup.isTouching(mario) && touches[1]) {
+        if (surpriseGroup.isTouching(mario) && touches[2]) {
             coinsGroup();
             star_display.addImage('tree');
             gameState = WIN;
